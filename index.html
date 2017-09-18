@@ -21,16 +21,28 @@
 </head>
 <body>
 	<div class="container">
-		<h1 id="heading">Crystal Collector Game</h1>
-		<p id="instructions">Instructions</p>
-		<div id="random-number-selector"></div>
-		<ul>
-			<li id="win-counter">Win Points</li>
-			<li id="losses-counter">Losses Points</li>
-		</ul>
-		<div id="crystals-random-number-selector"></div>
-		<p id="total-score-text">Your Total Score is:</p>
-		<div id="total-score"></div>
+		<div class="jumbotron">	
+			<h1 id="heading">Crystal Collector Game</h1>
+		</div>
+			<div class="panel panel-default" id="instructions">
+				<div class="panel-body">
+					<p>Instructions:<br> 
+					You will be given a random number at the start of the game. <br>
+					There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.<br>
+					You win the game by matching your total score to the random number, and lose the game if your total score goes above the random number.<br>
+					The value of each crytal is hidden from you until you click on it.<br>
+					Each time when the game starts, the game will change the values of each crytal. Good luck!<br>
+					</p>
+				</div>
+			</div>
+			<div class="panel panel-default" id="random-number-selector">Random number to match displays here</div>
+				<div class="panel-body">
+					<div id="win-counter">Win Points</div>
+					<div id="losses-counter">Losses Points</div>
+				</div>
+			<div class="panel panel-default" id="crystals-random-number-selector">crytals as buttons go here</div>
+				<p class="panel-heading" id="total-score-text">Your Total Score is:</p>
+			<div class="panel-body" id="total-score"></div>
 	
 	</div>
 </body>
