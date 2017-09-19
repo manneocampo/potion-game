@@ -6,10 +6,14 @@ winCounter id is win-counter
 lossesCounter id is losses-counter*/
 
 $(document).ready(function() {
+
+//global variables 
 var firstNumber; 
 var secondNumber;
 var result; 
 var winCounter; 
 var lossesCounter;
+
+
 
 }
