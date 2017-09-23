@@ -32,15 +32,48 @@ var crystalGame = {
 			console.log(this.btnThree);
 			this.btnFour=Math.ceil(Math.random()*12);
 			console.log(this.btnFour);
-			this.firstNum=Math.ceil(Math.random()* (120 - 19 + 1)) + 19;
-			$("#random-number-selector").html('<div class="panel panel-default text-center" id="random-number-selector">' + firstNum + '</div>')
+			this.firstNum=Math.floor(Math.random()*(120 - 19 + 1)) + 19;
+			$("#random-number-selector").html('<div class="panel panel-default text-center">' + this.firstNum + '</div>');
 			console.log(this.firstNum);
 			this.totalNum=0;
-			$("#total-score").html('<div class="panel-body text-center" id="total-score">' + totalNum + '</div>');
-			console.log(total-score);
-		}
+			$("#total-score").html(this.totalNum);
+			console.log($('#total-score').html());
+			$("#win-counter").html(this.totalWins);
+			$("#losses-counter").html(this.totalLosses);
+		},
 		gamePlay: function() {
 			this.reset();
-			
+			$("#button-1").on("click", function(){
+				crystalGame.totalNum += crystalGame.btnOne;
+				$("#total-score").html(crystalGame.totalNum);
+				crystalGame.winOrLose();
+			})
+			$("#button-2").on("click", function(){
+				crystalGame.totalNum += crystalGame.btnTwo;
+				$("#total-score").html(crystalGame.totalNum);
+				crystalGame.winOrLose();
+			})
+			$("#button-3").on("click", function(){
+				crystalGame.totalNum += crystalGame.btnThree;
+				$("#total-score").html(crystalGame.totalNum);
+				crystalGame.winOrLose();
+			})
+			$("#button-4").on("click", function(){
+				crystalGame.totalNum += crystalGame.btnFour;
+				$("#total-score").html(crystalGame.totalNum);
+				crystalGame.winOrLose();	
+			})
+		}, 
+		winOrLose: function() {
+			if (this.totalNum === this.firstNum) {
+				this.totalWins++;
+				$("#win-counter").html(this.totalWins);
+				this.reset();
+			}else if (this.totalNum > this.firstNum) {
+				this.totalLosses++;
+				$("#losses-counter").html(this.totalLosses);
+				this.reset();
+			}	
 		}
 }
+crystalGame.gamePlay();
