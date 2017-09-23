@@ -63,7 +63,8 @@ var crystalGame = {
 				$("#total-score").html(crystalGame.totalNum);
 				crystalGame.winOrLose();	
 			})
-		}, 
+		},
+		// function that checks whether player won or lost
 		winOrLose: function() {
 			if (this.totalNum === this.firstNum) {
 				this.totalWins++;
