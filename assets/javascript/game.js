@@ -43,26 +43,49 @@ var crystalGame = {
 		},
 		gamePlay: function() {
 			this.reset();
-			$("#button-1").on("click", function(){
-				crystalGame.totalNum += crystalGame.btnOne;
-				$("#total-score").html(crystalGame.totalNum);
-				crystalGame.winOrLose();
-			})
-			$("#button-2").on("click", function(){
-				crystalGame.totalNum += crystalGame.btnTwo;
-				$("#total-score").html(crystalGame.totalNum);
-				crystalGame.winOrLose();
-			})
-			$("#button-3").on("click", function(){
-				crystalGame.totalNum += crystalGame.btnThree;
-				$("#total-score").html(crystalGame.totalNum);
-				crystalGame.winOrLose();
-			})
-			$("#button-4").on("click", function(){
-				crystalGame.totalNum += crystalGame.btnFour;
-				$("#total-score").html(crystalGame.totalNum);
-				crystalGame.winOrLose();	
-			})
+			
+			$('.crystal').click(function() {
+				var elemID = $(this).attr('id');
+				console.log('elem: ', elemID);
+				if (elemID === 'button-1') {
+					crystalGame.totalNum += crystalGame.btnOne;
+					$("#total-score").html(crystalGame.totalNum);
+					crystalGame.winOrLose();
+				} else if (elemID === 'button-2') {
+					crystalGame.totalNum += crystalGame.btnTwo;
+					$("#total-score").html(crystalGame.totalNum);
+					crystalGame.winOrLose();
+				} else if (elemID === 'button-3') {
+					crystalGame.totalNum += crystalGame.btnThree;
+					$("#total-score").html(crystalGame.totalNum);
+					crystalGame.winOrLose();
+				} else if (elemID === 'button-4') {
+					crystalGame.totalNum += crystalGame.btnFour;
+					$("#total-score").html(crystalGame.totalNum);
+					crystalGame.winOrLose();
+				}
+			});
+			// $("#button-1").on("click", function(){
+			// 	console.log('this: ', this);
+			// 	crystalGame.totalNum += crystalGame.btnOne;
+			// 	$("#total-score").html(crystalGame.totalNum);
+			// 	crystalGame.winOrLose();
+			// })
+			// $("#button-2").on("click", function(){
+			// 	crystalGame.totalNum += crystalGame.btnTwo;
+			// 	$("#total-score").html(crystalGame.totalNum);
+			// 	crystalGame.winOrLose();
+			// })
+			// $("#button-3").on("click", function(){
+			// 	crystalGame.totalNum += crystalGame.btnThree;
+			// 	$("#total-score").html(crystalGame.totalNum);
+			// 	crystalGame.winOrLose();
+			// })
+			// $("#button-4").on("click", function(){
+			// 	crystalGame.totalNum += crystalGame.btnFour;
+			// 	$("#total-score").html(crystalGame.totalNum);
+			// 	crystalGame.winOrLose();	
+			// })
 		},
 		// function that checks whether player won or lost
 		winOrLose: function() {
