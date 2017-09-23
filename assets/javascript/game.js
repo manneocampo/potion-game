@@ -66,7 +66,8 @@ var crystalGame = {
 		},
 		// function that checks whether player won or lost
 		winOrLose: function() {
-			if (this.totalNum === this.secondNum) {
+
+			if (this.totalNum === this.firstNum) {
 				this.totalWins++;
 				$("#win-counter").html(this.totalWins);
 				this.reset();
