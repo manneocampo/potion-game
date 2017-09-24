@@ -33,7 +33,7 @@ var crystalGame = {
 			this.btnFour=Math.ceil(Math.random()*12);
 			console.log(this.btnFour);
 			this.firstNum=Math.floor(Math.random()*(120 - 19 + 1)) + 19;
-			$("#random-number-selector").html('<div class="panel panel-default text-center">' + this.firstNum + '</div>');
+			$("#random-number-selector").html(this.firstNum);
 			console.log(this.firstNum);
 			this.totalNum=0;
 			$("#total-score").html(this.totalNum);
