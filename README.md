@@ -1,4 +1,4 @@
-# week-4-game
+#Number Matching Game
 Potion Making Game - The user tries to match their number to the randomly generated number.
 
 Overview: 
